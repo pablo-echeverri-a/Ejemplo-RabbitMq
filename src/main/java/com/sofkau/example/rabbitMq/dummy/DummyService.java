@@ -16,8 +16,9 @@ public class DummyService {
     private Publisher publisher;
 
     public void sentToRabbit(String message){
-        log.info("Message '{}' will be send...", message);
-        this.publisher.send(message);
+        Data data = new Data(1,"hola");
+        log.info("Message '{}' will be send...", data.toString());
+        this.publisher.send(data);
     }
 
 }

@@ -1,5 +1,6 @@
 package com.sofkau.example.rabbitMq.consumer;
 
+import com.sofkau.example.rabbitMq.dummy.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -15,7 +16,7 @@ public class Consumer {
     public void receive(@Payload String message){
 
         log.info("Mensaje recibido: {}", message);
-
+        delay();
     }
 
     private void delay(){
